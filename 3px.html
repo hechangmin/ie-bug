@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<style>
+html{overflow: hidden;}
+body{overflow:auto;margin:0;padding:0;}
+.clearfix:after{
+	content: ' ';
+	display: block;
+	visibility: hidden;
+	height: 0px;
+	clear: both;
+}
+.clearfix{
+	zoom:1;
+}
+/*
+* bug 描述：3px 问题
+* 解决方案：设置成浮动
+*/
+
+.d{margin-top:100px;}
+.dd1{border:solid 1px blue;float:left;}
+.dd2{border:solid 1px red;height:1px;}/*不指定这个高度，没出现这个BUG*/
+/*解决方法，让dd2 float:left;*/
+
+</style>
+ </head>
+ <body>
+ <div class="d">
+ 	<div class="dd1">hello</div>
+ 	<div class="dd2">world</div>
+ </div>
+ </body>
+ </html>

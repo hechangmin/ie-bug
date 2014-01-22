@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<body>
+<style>
+html{overflow: hidden;}
+body{overflow:auto;margin:0;padding:0;}
+/*
+* bug 描述：margin 失效的问题
+* 解决方案：触发g的layout，给他加上zoom:1 or float; or width
+*/
+.g{background:#eee;border:solid 1px #ccc;/*zoom:1;*/}
+.g1{border-bottom:2px solid #aaa;margin:0 10px;height:30px;}
+</style>
+<div class="g">
+	<div class="g1">www.baidu.com</div>
+</div>
+</body>
+</html>

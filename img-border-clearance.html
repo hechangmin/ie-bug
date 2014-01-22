@@ -1,0 +1,28 @@
+<!doctype html>
+ <html>
+ <body>
+ <style>
+ html{overflow: hidden;}
+ body{overflow:auto;margin:0;padding:0;}
+ .clearfix:after{
+ 	content: ' ';
+ 	display: block;
+ 	visibility: hidden;
+ 	height: 0px;
+ 	clear: both;
+ }
+ .clearfix{
+ 	zoom:1;
+ }
+/*
+* bug 描述：图片有间隙
+* 解决方案：img display:block
+*/
+ .f{border:solid 1px red;background:blue;height:100px;margin-top:40px;}
+ .f img{width:100px;height:100px;border:none;/*display: block;*/}
+ </style>
+ <div class="f">
+ 	<img src="http://www.baidu.com/img/baidu_jgylogo3.gif" />
+ </div>
+ </body>
+ </html>

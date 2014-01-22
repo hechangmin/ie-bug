@@ -1,0 +1,26 @@
+<!doctype html>
+ <html>
+ <body>
+ <style>
+ html{overflow: hidden;}
+ body{overflow:auto;margin:0;padding:0;}
+ .clearfix:after{
+ 	content: ' ';
+ 	display: block;
+ 	visibility: hidden;
+ 	height: 0px;
+ 	clear: both;
+ }
+ .clearfix{
+ 	zoom:1;
+ }
+
+/*
+* bug 描述：设置不了0~19像素的高度
+* 解决方案：给元素增加 overflow:hidden
+*/
+ .e{width:10px;height:10px;background-color:red;/*overflow:hidden;*/}
+ </style>
+ <div class="e">a</div>
+ </body>
+ </html>

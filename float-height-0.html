@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<body>
+<style>
+html{overflow: hidden;}
+body{overflow:auto;margin:0;padding:0;}
+/*
+* bug 描述：浮动高度塌陷
+* 解决方案：清除浮动
+* comment : 严格说这个不是IE 6 BUG
+*/
+.b{border:solid 1px blue;}
+.bb{float:left;}
+
+/*fixed add b element class clearfix*/
+.clearfix:after{
+	content: ' ';
+	display: block;
+	visibility: hidden;
+	height: 0px;
+	clear: both;
+}
+.clearfix{
+	zoom:1;
+}
+</style>
+<div class="b">
+	<div class="bb">aaaaaaaaaaaaaaa</div>
+</div>
+</body>
+</html>

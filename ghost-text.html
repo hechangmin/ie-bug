@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	html{overflow: hidden;}
+	body{overflow:auto;margin:0;padding:0;}
+	/*
+	* bug 描述：幽灵文字
+	* 解决方案：1.取消.h1中间的注释 or .h1 的宽度<= .h - 3px
+	*/
+	.h{width:120px;float:left;}
+	.h1{width:120px;float:left;}
+	</style>
+</head>
+<body>
+<div class="h">
+ 	<div class="h1">人生自古谁无死</div>
+ 	<!--试试-->
+ 	<!--试试-->
+ 	<!--试试-->
+ 	<div class="h1">人生自古谁无死</div>
+</div>
+</body>
+</html>

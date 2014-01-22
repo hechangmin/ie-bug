@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<style>
+html{overflow: hidden;}
+body{overflow:auto;margin:0;padding:0;}
+/*
+* bug 描述：设置了overflow:hidden 相对位置还是溢出
+* 解决方案：add position:relative or absolute
+*/
+.a{width:90px;height:90px;overflow:hidden;border:solid 1px red;/*position: relative;*/}
+.aa{width:120px;height:120px;border:solid 1px blue;float:left;position:relative;}
+</style>
+</head>
+<body>
+<div class="a">
+	<div class="aa"></div>
+<div>
+</body>
+</html>
