@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>IE 6 遮罩层被select元素穿透的处理</title>
+</head>
+<body>
+    allowtransparency="true" 会导致iframe 盖不住select.
+    所以不要用这个属性，改用样式表吧。
+    </br>
+    <input type="button" value="test" id='test' />
+    </br>
+    <select><option>sdf</option></select>
+    <div style="position:absolute;top:0;left:0;background:red;_filter:alpha(opacity=40);opacity=0.4;width:200px;height:200px;left:20px;top:20px;">
+        <iframe style="position:absolute;top:0;left:0;width:200px;height:200px;_filter:alpha(opacity=0);opacity=0;border-style:none;"></iframe>
+    </div>
+</body>
+</html>
